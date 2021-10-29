@@ -48,3 +48,28 @@ Route::get('biodata2', function () {
     return view('biodata',
         compact('nama', 'jk', 'tl', 'tgl', 'alamat', 'agama', 'hobi'));
 });
+Route::get('blog', function () {
+    $data = [
+        ['id' => 1, 'title' => 'Lorem Ipsum 1', 'content' => 'content pertama'],
+        ['id' => 2, 'title' => 'Lorem Ipsum 2', 'content' => 'content kedua'],
+        ['id' => 3, 'title' => 'Lorem Ipsum 3', 'content' => 'content ketiga'],
+    ];
+    // dd($data);
+    return view('blog', compact('data'));
+});
+Route::get('siswa', function () {
+    $data = [
+        ['nis' => 19201753236, 'nama' => 'Cindy', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753237, 'nama' => 'Dinda', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753238, 'nama' => 'Fuji', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753239, 'nama' => 'Indah', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753240, 'nama' => 'Indri', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753241, 'nama' => 'Irfan', 'jk' => 'Laki-Laki', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753242, 'nama' => 'Kiki', 'jk' => 'Laki-Laki', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753243, 'nama' => 'Lia', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753244, 'nama' => 'M Resta', 'jk' => 'Laki-Laki', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+        ['nis' => 19201753245, 'nama' => 'M Zulfan', 'jk' => 'Laki-Laki', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
+    ];
+    // dd($data);
+    return view('siswa', compact('data'));
+});
