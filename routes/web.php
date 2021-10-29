@@ -57,7 +57,7 @@ Route::get('blog', function () {
     // dd($data);
     return view('blog', compact('data'));
 });
-Route::get('siswa', function () {
+Route::get('absen', function () {
     $data = [
         ['nis' => 19201753236, 'nama' => 'Cindy', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
         ['nis' => 19201753237, 'nama' => 'Dinda', 'jk' => 'Perempuan', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
@@ -71,5 +71,52 @@ Route::get('siswa', function () {
         ['nis' => 19201753245, 'nama' => 'M Zulfan', 'jk' => 'Laki-Laki', 'kelas' => 'XII RPL 3', 'alamat' => 'Bandung'],
     ];
     // dd($data);
+    return view('absen', compact('data'));
+});
+Route::get('siswa', function () {
+    $data = [
+        [
+            'id' => 1,
+            'nama' => 'Aditya',
+            'username' => 'aditya',
+            'email' => 'aditya@gmail.com',
+            'alamat' => 'Bandung',
+            'mapel' => [
+                'mapel1' => 'Bahasa Indonesia',
+                'mapel2' => 'Bahasa Inggris',
+                'mapel3' => 'Bahasa Jepang',
+                'mapel4' => 'Bahasa Belanda',
+            ],
+
+        ],
+    ];
+    // dd($data);
     return view('siswa', compact('data'));
+});
+
+//parameter optional
+Route::get('/input/{nama?}/{kelas?}', function ($nama = null, $kelas = "12 RPL 3") {
+    echo "Nama Saya : " . $nama;
+    echo "<br>";
+    echo "Kelas     : " . $kelas;
+});
+
+Route::get('/lat1/{nama?}/{indo?}/{ing?}/{mtk?}/{pro?}', function ($nama = null, $indo = 95, $ing = 85, $mtk = 90, $pro = 100) {
+    echo "Nama : " . $nama . "<br>";
+    echo "Nilai Bahasa Indonesia : " . $indo . "<br>";
+    echo "Nilai Bahasa Inggris : " . $ing . "<br>";
+    echo "Nilai Matematika : " . $mtk . "<br>";
+    echo "Nilai Produktif : " . $pro . "<br>";
+    $rata = ($indo + $ing + $mtk + $pro) / 2;
+    echo "Rata-rata : " . $rata . "<br>";
+    echo "Grade : ";
+    if ($rata >= 90) {
+        echo "A";
+    } elseif ($rata >= 80) {
+        echo "B";
+    } elseif ($rata >= 70) {
+        echo "C";
+    } else {
+        echo "D";
+    }
 });

@@ -6,12 +6,15 @@
     <h2>Menampilkan Data Siswa</h2>
     <ul>
         @foreach ($data as $data2)
-        NIS : {{ $data2['nis']}} <br>
+        id : {{ $data2['id']}} <br>
         Nama : {{ $data2['nama']}} <br>
-        Jenis Kelamin : {{ $data2['jk']}} <br>
-        Kelas : {{ $data2['kelas']}} <br>
-        Alamat : {{ $data2['alamat']}} <br>
-        <hr>
+        Jenis Kelamin : {{ $data2['username']}} <br>
+        Kelas : {{ $data2['alamat']}} <br>
+        Mapel :
+        @foreach($data2 ['mapel'] as $data3)
+            <ul>
+                <li>{{ $data3 }}</li
+        @endforeach
         @endforeach
     </ul>
 </body>
