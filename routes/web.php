@@ -107,7 +107,7 @@ Route::get('/lat1/{nama?}/{indo?}/{ing?}/{mtk?}/{pro?}', function ($nama = null,
     echo "Nilai Bahasa Inggris : " . $ing . "<br>";
     echo "Nilai Matematika : " . $mtk . "<br>";
     echo "Nilai Produktif : " . $pro . "<br>";
-    $rata = ($indo + $ing + $mtk + $pro) / 2;
+    $rata = ($indo + $ing + $mtk + $pro) / 4;
     echo "Rata-rata : " . $rata . "<br>";
     echo "Grade : ";
     if ($rata >= 90) {
@@ -118,5 +118,32 @@ Route::get('/lat1/{nama?}/{indo?}/{ing?}/{mtk?}/{pro?}', function ($nama = null,
         echo "C";
     } else {
         echo "D";
+    }
+});
+
+Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null, $minuman = null, $cemilan = null) {
+    if ($makanan != null && $minuman == null && $cemilan == null) {
+        echo "Anda Memesan ";
+        echo "<br>";
+        echo "Makanan : " . $makanan;
+
+    } elseif ($makanan != null && $minuman != null && $cemilan == null) {
+        echo "Anda Memesan ";
+        echo "<br>";
+        echo "Makanan : " . $makanan;
+        echo "<br>";
+        echo "Minuman     : " . $minuman;
+    } elseif ($makanan != null && $minuman != null && $cemilan != null) {
+        echo "Anda Memesan ";
+        echo "<br>";
+        echo "Makanan : " . $makanan;
+        echo "<br>";
+        echo "Minuman     : " . $minuman;
+        echo "<br>";
+        echo "Cemilan     : " . $cemilan;
+
+    } else {
+        echo "Anda Tidak Memesan Silahkan Pulang";
+
     }
 });
