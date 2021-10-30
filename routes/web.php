@@ -147,3 +147,8 @@ Route::get('/pesan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = null,
 
     }
 });
+
+Route::get('/testmodel', function () {
+    $query = App\Models\Post::all();
+    return $query;
+});
