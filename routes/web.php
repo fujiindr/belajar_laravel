@@ -152,3 +152,19 @@ Route::get('/testmodel', function () {
     $query = App\Models\Post::all();
     return $query;
 });
+
+Route::get('/test', function () {
+    $query = App\Models\Post::all();
+    return view('test', compact('query'));
+});
+
+Route::get('/barang', function () {
+    $query = App\Models\Barang::all();
+    return view('barang', compact('query'));
+
+});
+
+Route::get('/suplier', function () {
+    $query = App\Models\Suplier::all();
+    return $query;
+});
