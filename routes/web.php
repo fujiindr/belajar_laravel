@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\SuplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -158,32 +160,30 @@ Route::get('/test', function () {
     return view('test', compact('query'));
 });
 
-Route::get('/barang', function () {
-    $query = App\Models\Barang::all();
-    return view('barang', compact('query'));
+// Route::get('/barang', function () {
+//     $query = App\Models\Barang::all();
+//     return view('barang', compact('query'));
+// });
 
-});
+// Route::get('/pembelian', function () {
+//     $query = App\Models\Pembelian::all();
+//     return view('pembelian', compact('query'));
+// });
 
-Route::get('/pembelian', function () {
-    $query = App\Models\Pembelian::all();
-    return view('pembelian', compact('query'));
+// Route::get('/pembeli', function () {
+//     $query = App\Models\Pembeli::all();
+//     return view('pembeli', compact('query'));
+// });
 
-});
+// Route::get('/pesanan', function () {
+//     $query = App\Models\Pesanan::all();
+//     return view('pesanan', compact('query'));
+// });
 
-Route::get('/pembeli', function () {
-    $query = App\Models\Pembeli::all();
-    return view('pembeli', compact('query'));
+// Route::get('/suplier', function () {
+//     $query = App\Models\Suplier::all();
+//     return view('suplier', compact('query'));
+// });
 
-});
-
-Route::get('/pesanan', function () {
-    $query = App\Models\Pesanan::all();
-    return view('pesanan', compact('query'));
-
-});
-
-Route::get('/suplier', function () {
-    $query = App\Models\Suplier::all();
-    return view('suplier', compact('query'));
-
-});
+Route::get('/barang', [BarangController::class, 'tampilkan']);
+Route::get('/suplier', [SuplierController::class, 'suplier']);

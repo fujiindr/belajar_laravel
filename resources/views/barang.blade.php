@@ -5,7 +5,7 @@
 <body>
     <h2>Tampilkan Data Barang</h2>
 
-    @foreach ($query as $data)
+    @foreach ($barang as $data)
     <p>Id Barang : {{ $data -> id_barang}}</p>
     <p>Nama : {{ $data -> nama}}</p>
     <p>Varian : {{ $data -> varian}}</p>
