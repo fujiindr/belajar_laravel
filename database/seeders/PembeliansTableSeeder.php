@@ -16,25 +16,30 @@ class PembeliansTableSeeder extends Seeder
     {
         $pembelian = [
             ['nama_barang' => 'Baju',
-                'varian' => 'Atasan',
-                'harga_beli' => 25000,
-                'harga_jual' => 50000],
+                'nama_suplier' => 'Ujang',
+                'jumlah' => 2,
+                'tanggal' => '2021-11-01'
+            ],
             ['nama_barang' => 'Kemeja',
-                'varian' => 'Atasan',
-                'harga_beli' => 50000,
-                'harga_jual' => 75000],
-            ['nama_barang' => 'sweater',
-                'varian' => 'Atasan',
-                'harga_beli' => 75000,
-                'harga_jual' => 100000],
+                'nama_suplier' => 'Dadang',
+                'jumlah' => 5,
+                'tanggal' => '2021-11-01'
+            ],
+            ['nama_barang' => 'Sweater',
+                'nama_suplier' => 'Dudung',
+                'jumlah' => 3,
+                'tanggal' => '2021-11-01'
+            ],
             ['nama_barang' => 'Katun',
-                'varian' => 'Bawahan',
-                'harga_beli' => 150000,
-                'harga_jual' => 175000],
+                'nama_suplier' => 'Entin',
+                'jumlah' => 1,
+                'tanggal' => '2021-11-01'
+            ],
             ['nama_barang' => 'Kulot',
-                'varian' => 'Bawahan',
-                'harga_beli' => 50000,
-                'harga_jual' => 100000],
+                'nama_suplier' => 'Mia',
+                'jumlah' => 4,
+                'tanggal' => '2021-11-01'
+            ],
         ];
 
         DB::table('pembelians')->insert($pembelian);

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSuplierTable extends Migration
+class CreateBarangsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateSuplierTable extends Migration
      */
     public function up()
     {
-        Schema::create('suplier', function (Blueprint $table) {
-            $table->increments('id_suplier');
+        Schema::create('barangs', function (Blueprint $table) {
+            $table->increments('id_barang');
             $table->string('nama');
-            $table->text('alamat');
-            $table->Integer('kode_pos');
-            $table->string('kota');
+            $table->string('varian');
+            $table->Integer('harga_beli');
+            $table->Integer('harga_jual');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateSuplierTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('suplier');
+        Schema::dropIfExists('barangs');
     }
 }
