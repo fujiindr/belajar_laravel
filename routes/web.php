@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PembelianController;
+use App\Http\Controllers\PembeliController;
+use App\Http\Controllers\PesananController;
 use App\Http\Controllers\SuplierController;
 use Illuminate\Support\Facades\Route;
 
@@ -186,4 +189,7 @@ Route::get('/test', function () {
 // });
 
 Route::get('/barang', [BarangController::class, 'tampilkan']);
+Route::get('/pembeli', [PembeliController::class, 'pembeli']);
+Route::get('/pembelian', [PembelianController::class, 'pembelian']);
+Route::get('/pesanan', [PesananController::class, 'pesanan']);
 Route::get('/suplier', [SuplierController::class, 'suplier']);
