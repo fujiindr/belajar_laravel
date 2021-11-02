@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call(PostsTableSeeder::class);
         $this->call(BarangsTableSeeder::class);
         $this->call(SupliersTableSeeder::class);
+        $this->call(PembeliansTableSeeder::class);
+        $this->call(PembelisTableSeeder::class);
+        $this->call(PesanansTableSeeder::class);
 
     }
 }

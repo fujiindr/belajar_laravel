@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePembelisTable extends Migration
+class CreateSupliersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreatePembelisTable extends Migration
      */
     public function up()
     {
-        Schema::create('pembelis', function (Blueprint $table) {
-            $table->increments('id_pembeli');
+        Schema::create('supliers', function (Blueprint $table) {
+            $table->increments('id_suplier');
             $table->string('nama');
-            $table->string('jk');
             $table->text('alamat');
             $table->Integer('kode_pos');
             $table->string('kota');
-            $table->date('tgl_lahir');
             $table->timestamps();
+
         });
     }
 
@@ -32,6 +31,6 @@ class CreatePembelisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pembelis');
+        Schema::dropIfExists('supliers');
     }
 }

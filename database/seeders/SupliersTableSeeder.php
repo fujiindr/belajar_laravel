@@ -18,30 +18,31 @@ class SupliersTableSeeder extends Seeder
             ['nama' => 'Ujang',
                 'alamat' => 'Dayeuhkolot',
                 'kode_pos' => 40238,
-                'kota' => 'Bandung'
+                'kota' => 'Bandung',
             ],
             ['nama' => 'Dadang',
                 'alamat' => 'Dayeuhkolot',
                 'kode_pos' => 40238,
-                'kota' => 'Bandung'
+                'kota' => 'Bandung',
             ],
             ['nama' => 'Dudung',
                 'alamat' => 'Dayeuhkolot',
                 'kode_pos' => 40238,
-                'kota' => 'Bandung'
+                'kota' => 'Bandung',
             ],
             ['nama' => 'Entin',
                 'alamat' => 'Baleendah',
                 'kode_pos' => 40239,
-                'kota' => 'Bandung'
+                'kota' => 'Bandung',
             ],
             ['nama' => 'Mia',
                 'alamat' => 'Baleendah',
                 'kode_pos' => 40239,
-                'kota' => 'Bandung'
+                'kota' => 'Bandung',
             ],
         ];
 
         DB::table('supliers')->insert($suplier);
+
     }
 }

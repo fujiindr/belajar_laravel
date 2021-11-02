@@ -17,9 +17,10 @@ class CreatePesanansTable extends Migration
             $table->increments('id_pesanan');
             $table->string('nama_pelanggan');
             $table->string('nama_barang');
-            $table->Integer('jumlah');;
+            $table->Integer('jumlah');
             $table->date('tgl_pesan');
             $table->timestamps();
+
         });
     }
 

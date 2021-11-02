@@ -164,7 +164,26 @@ Route::get('/barang', function () {
 
 });
 
+Route::get('/pembelian', function () {
+    $query = App\Models\Pembelian::all();
+    return view('pembelian', compact('query'));
+
+});
+
+Route::get('/pembeli', function () {
+    $query = App\Models\Pembeli::all();
+    return view('pembeli', compact('query'));
+
+});
+
+Route::get('/pesanan', function () {
+    $query = App\Models\Pesanan::all();
+    return view('pesanan', compact('query'));
+
+});
+
 Route::get('/suplier', function () {
     $query = App\Models\Suplier::all();
-    return $query;
+    return view('suplier', compact('query'));
+
 });
