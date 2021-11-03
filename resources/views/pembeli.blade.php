@@ -3,18 +3,37 @@
     <title>array</title>
 </head>
 <body>
-    <h2>Tampilkan Data Pembeli</h2>
+<table style="width:100%" border=1>
+
+    <tr>
+        <th colspan="7">Tampilkan Data Pembeli</th>
+    </tr>
+
+    <tr>
+        <th style="width:8%">Id Pembeli</th>
+        <th>Nama</th>
+        <th>Jenis Kelamin</th>
+        <th>Alamat</th>
+        <th>Kode Pos</th>
+        <th>Kota</th>
+        <th>Tanggal Lahir</th>
+    </tr>
 
     @foreach ($query as $data)
-    <p>Id Pembeli : {{ $data -> id_pembeli}}</p>
-    <p>Nama : {{ $data -> nama}}</p>
-    <p>Jenis Kelamin : {{ $data -> jk}}</p>
-    <p>Alamat : {{ $data -> alamat}}</p>
-    <p>Kode Pos : {{ $data -> kode_pos}}</p>
-    <p>Kota : {{ $data -> kota}}</p>
-    <p>Tanggal Lahir : {{ $data -> tgl_lahir}}</p>
-    <hr>
+
+    <tr>
+        <td style="width:8%">
+            <center>{{ $data -> id_pembeli}}</center>
+        </td>
+        <td>{{ $data -> nama}}</td>
+        <td>{{ $data -> jk}}</td>
+        <td>{{ $data -> alamat}}</td>
+        <td>{{ $data -> kode_pos}}</td>
+        <td>{{ $data -> kota}}</td>
+        <td>{{ $data -> tgl_lahir}}</td>
+    </tr>
     @endforeach
 
+</table>
 </body>
 </html>

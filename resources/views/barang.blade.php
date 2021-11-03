@@ -3,16 +3,35 @@
     <title>array</title>
 </head>
 <body>
-    <h2>Tampilkan Data Barang</h2>
+<table style="width:100%" border=1>
+
+    <tr>
+        <th colspan="5">Tampilkan Data Barang</th>
+
+    </tr>
+
+    <tr>
+        <th style="width:8%">Id Barang</th>
+        <th>Nama</th>
+        <th>Varian</th>
+        <th>Harga Beli</th>
+        <th>Harga Jual</th>
+
+    </tr>
 
     @foreach ($barang as $data)
-    <p>Id Barang : {{ $data -> id_barang}}</p>
-    <p>Nama : {{ $data -> nama}}</p>
-    <p>Varian : {{ $data -> varian}}</p>
-    <p>Harga Beli : {{ $data -> harga_beli}}</p>
-    <p>Harga Jual : {{ $data -> harga_jual}}</p>
-    <hr>
+
+    <tr>
+        <td style="width:8%">
+            <center>{{ $data -> id_barang}}</center>
+        </td>
+        <td>{{ $data -> nama}}</td>
+        <td>{{ $data -> varian}}</td>
+        <td>{{ $data -> harga_beli}}</td>
+        <td>{{ $data -> harga_jual}}</td>
+    </tr>
     @endforeach
 
+</table>
 </body>
 </html>

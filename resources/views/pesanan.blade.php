@@ -3,16 +3,33 @@
     <title>array</title>
 </head>
 <body>
-    <h2>Tampilkan Data Pesanan</h2>
+<table style="width:100%" border=1>
+
+    <tr>
+        <th colspan="5">Tampilkan Data Pesanan</th>
+    </tr>
+
+    <tr>
+        <th style="width:8%">Id Pesanan</th>
+        <th>Nama Pelanggan</th>
+        <th>Nama Barang</th>
+        <th>Jumlah</th>
+        <th>Tanggal Pesan</th>
+    </tr>
 
     @foreach ($query as $data)
-    <p>Id Pesanan : {{ $data -> id_pesanan}}</p>
-    <p>Nama Pelanggan : {{ $data -> nama_pelanggan}}</p>
-    <p>Nama Barang : {{ $data -> nama_barang}}</p>
-    <p>Jumlah : {{ $data -> jumlah}}</p>
-    <p>Tanggal Pesan : {{ $data -> tgl_pesan}}</p>
-    <hr>
+
+    <tr>
+        <td style="width:8%">
+            <center>{{ $data -> id_pesanan}}</center>
+        </td>
+        <td>{{ $data -> nama_pelanggan}}</td>
+        <td>{{ $data -> nama_barang}}</td>
+        <td>{{ $data -> jumlah}}</td>
+        <td>{{ $data -> tgl_pesan}}</td>
+    </tr>
     @endforeach
 
+</table>
 </body>
 </html>
